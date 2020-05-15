@@ -1,0 +1,11 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 7f03a3c..e20d4f9 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -54,5 +54,5 @@ bincode = "1.1"
+ arrayvec = "0.4.10"
+ better-panic = "0.1"
+-err-derive = "0.1"
++err-derive = "0.2.0"
+ image = { version = "0.22.1", optional = true }
+ byteorder = { version = "1.3.2", optional = true }
