@@ -8,9 +8,9 @@ while git checkout HEAD~
 do
   "${DIR}"/patch_commit.sh
 
-  cargo build
+  RUSTFLAGS=-Awarnings cargo build -q
   FAIL=$?
-  git stash; git stash drop
+  git stash -q; git stash drop
   if [[ $FAIL -ne 0 ]] ; then
     break
   fi
