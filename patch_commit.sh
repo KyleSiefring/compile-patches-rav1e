@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 if [ "$1" != "" ]; then
     cd "$1"
 fi
@@ -27,7 +29,7 @@ elif git merge-base --is-ancestor HEAD 16fbf3e27a0f728ea9af9e022c5cef0ccbfba436 
   # do nothing
   [ ]
 elif git merge-base --is-ancestor HEAD d91583887409aad4a55f5c7f4eee1d0f31ec9443 ; then
-  git apply ../patches/505-d91583887409aad4a55f5c7f4eee1d0f31ec9443.diff
+  git apply ${DIR}/patches/505-d91583887409aad4a55f5c7f4eee1d0f31ec9443.diff
   if [[ $? -ne 0 ]] ; then
     break
   fi
@@ -36,27 +38,27 @@ elif git merge-base --is-ancestor HEAD 13cfd2416c0e4905fbc9c84d207e7763111c3e14 
   # do nothing
   [ ]
 elif git merge-base --is-ancestor HEAD 16cce1dc574b9b093d2f9decd2f576dcef606ab4 ; then
-  git apply ../patches/504-16cce1dc574b9b093d2f9decd2f576dcef606ab4.diff
+  git apply ${DIR}/patches/504-16cce1dc574b9b093d2f9decd2f576dcef606ab4.diff
   if [[ $? -ne 0 ]] ; then
     break
   fi
 elif git merge-base --is-ancestor HEAD e44bf1cb93ceba16e6a845e27f1a1a9fbac80712 ; then
-  git apply ../patches/503-e44bf1cb93ceba16e6a845e27f1a1a9fbac80712.diff
+  git apply ${DIR}/patches/503-e44bf1cb93ceba16e6a845e27f1a1a9fbac80712.diff
   if [[ $? -ne 0 ]] ; then
     break
   fi
 elif git merge-base --is-ancestor HEAD 39b93e6a7ea4f99361fd88ab997a96ee9bc7a6f2 ; then
-  git apply ../patches/502-39b93e6a7ea4f99361fd88ab997a96ee9bc7a6f2.diff
+  git apply ${DIR}/patches/502-39b93e6a7ea4f99361fd88ab997a96ee9bc7a6f2.diff
   if [[ $? -ne 0 ]] ; then
     break
   fi
 elif git merge-base --is-ancestor HEAD 4245f89efcf0cc99ada59765d1f8323d56e76e1b ; then
-  git apply ../patches/501-4245f89efcf0cc99ada59765d1f8323d56e76e1b.diff
+  git apply ${DIR}/patches/501-4245f89efcf0cc99ada59765d1f8323d56e76e1b.diff
   if [[ $? -ne 0 ]] ; then
     break
   fi
 elif git merge-base --is-ancestor HEAD 37e3b59c0185a4e13bd67f010cf61569603128fb ; then
-  git apply ../patches/500-37e3b59c0185a4e13bd67f010cf61569603128fb.diff
+  git apply ${DIR}/patches/500-37e3b59c0185a4e13bd67f010cf61569603128fb.diff
   if [[ $? -ne 0 ]] ; then
     break
   fi
