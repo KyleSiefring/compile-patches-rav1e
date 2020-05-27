@@ -1,0 +1,13 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 4d7122c..1447c75 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -62,7 +62,7 @@ y4m = { version = "0.5", optional = true }
+ backtrace = { version = "0.3", optional = true }
+ num-traits = "0.2"
+ num-derive = "0.3"
+-paste = "0.1"
++paste = "=0.1.12"
+ noop_proc_macro = "0.2.0"
+ serde = { version = "1.0", features = ["derive"], optional = true }
+ dav1d-sys = { version = "0.3.1", optional = true }

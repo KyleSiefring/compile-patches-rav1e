@@ -30,39 +30,40 @@ elif git merge-base --is-ancestor HEAD 16fbf3e27a0f728ea9af9e022c5cef0ccbfba436 
   [ ]
 elif git merge-base --is-ancestor HEAD d91583887409aad4a55f5c7f4eee1d0f31ec9443 ; then
   git apply ${DIR}/patches/505-d91583887409aad4a55f5c7f4eee1d0f31ec9443.diff
-  if [[ $? -ne 0 ]] ; then
-    break
-  fi
+  exit $?
 elif git merge-base --is-ancestor HEAD 13cfd2416c0e4905fbc9c84d207e7763111c3e14 ; then
   # err-derive gone
   # do nothing
   [ ]
 elif git merge-base --is-ancestor HEAD 16cce1dc574b9b093d2f9decd2f576dcef606ab4 ; then
   git apply ${DIR}/patches/504-16cce1dc574b9b093d2f9decd2f576dcef606ab4.diff
-  if [[ $? -ne 0 ]] ; then
-    break
-  fi
+  exit $?
 elif git merge-base --is-ancestor HEAD e44bf1cb93ceba16e6a845e27f1a1a9fbac80712 ; then
   git apply ${DIR}/patches/503-e44bf1cb93ceba16e6a845e27f1a1a9fbac80712.diff
-  if [[ $? -ne 0 ]] ; then
-    break
-  fi
+  exit $?
 elif git merge-base --is-ancestor HEAD 39b93e6a7ea4f99361fd88ab997a96ee9bc7a6f2 ; then
   git apply ${DIR}/patches/502-39b93e6a7ea4f99361fd88ab997a96ee9bc7a6f2.diff
-  if [[ $? -ne 0 ]] ; then
-    break
-  fi
+  exit $?
 elif git merge-base --is-ancestor HEAD 4245f89efcf0cc99ada59765d1f8323d56e76e1b ; then
   git apply ${DIR}/patches/501-4245f89efcf0cc99ada59765d1f8323d56e76e1b.diff
-  if [[ $? -ne 0 ]] ; then
-    break
-  fi
+  exit $?
 elif git merge-base --is-ancestor HEAD 37e3b59c0185a4e13bd67f010cf61569603128fb ; then
   git apply ${DIR}/patches/500-37e3b59c0185a4e13bd67f010cf61569603128fb.diff
-  if [[ $? -ne 0 ]] ; then
-    break
-  fi
+  exit $?
+elif git merge-base --is-ancestor HEAD 20f08bcd182a9bfc284ca861d645972dbb880810 ; then
+  [ ]
+elif git merge-base --is-ancestor HEAD 4897f50db7aef86cf3085c5049489956fe48a73a ; then
+  git apply ${DIR}/patches/499-4897f50db7aef86cf3085c5049489956fe48a73a.diff
+  exit $?
+elif git merge-base --is-ancestor HEAD c4cb0f6e3b8c10294f9f957df1032b5601b89f7a ; then
+  git apply ${DIR}/patches/498-c4cb0f6e3b8c10294f9f957df1032b5601b89f7a.diff
+  exit $?
+elif git merge-base --is-ancestor HEAD 7d617a479d1d1a7051993d71ff92c1e2287fc955 ; then
+  git apply ${DIR}/patches/497-7d617a479d1d1a7051993d71ff92c1e2287fc955.diff
+  exit $?
 fi
+
+exit 0
 
 # skip 85a440497b2a1b53b5de0c466ba31c2c7c1658c8
 #  Bug for one commit. Compiles from a clean compile.

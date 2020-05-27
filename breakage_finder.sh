@@ -7,6 +7,9 @@ cd "${DIR}/rav1e"
 while git checkout HEAD~
 do
   "${DIR}"/patch_commit.sh
+  if [[ $? -ne 0 ]] ; then
+    break
+  fi
 
   RUSTFLAGS=-Awarnings cargo build -q
   FAIL=$?
