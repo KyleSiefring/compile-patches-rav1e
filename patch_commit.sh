@@ -13,7 +13,8 @@ if [ $hash = "85a440497b2a1b53b5de0c466ba31c2c7c1658c8" ] ||
    [ $hash = "5271249e90a8fd93554a706f358e2d035a77080e" ] ||
    [ $hash = "2c83dfd61b8b2662614c0c79a1739b3bfbe44891" ] ||
    [ $hash = "6d306b642494ad0a92bb57f72b185df9eb6fa63c" ] ||
-   [ $hash = "ea5f9e5ab17abebf9d367e17bcb1e29cc5676414" ]; then
+   [ $hash = "ea5f9e5ab17abebf9d367e17bcb1e29cc5676414" ] ||
+   [ $hash = "fff4653c4e17eba3df4b10fad3fa299e8806c069" ]; then
   git diff HEAD HEAD~ | git apply -
 elif git merge-base --is-ancestor HEAD 71ce5b48829bed343d60ebab0fa32992eab9a657 &&
      git merge-base --is-ancestor 9aca6b2600a0c851f5a110906e21b96c9075041d HEAD; then
